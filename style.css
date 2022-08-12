@@ -1,7 +1,104 @@
-body{
-   background-color: white;
-    /* background-image: url("/images1/1111.png"); */
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(80, 80, 80);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.navbar-collapse {
-    color: black;
+
+li {
+  float: left;
+
+
+}
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: grey;
+}
+
+#jello {
+  margin-top: 74px;
+  padding-left: 29px;
+}
+
+#ritesh {
+  float: right;
+}
+
+#null {
+
+  float: right;
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+
+
+.row {
+  width: 100%;
+  display: inline-flex;
+  height: 450px;
+ 
+  
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  /* Should be removed. Only for demonstration */
+}
+.new{
+  background-color: rgb(52, 52, 52);
+  margin-top: 10px;
+  
+}
+h1{
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 32px;
+  margin: 30px;
+  padding-top: 100px;
+}
+h6{
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+  margin: 30px;
+}
+button{
+  border-radius: 4px;
+  background-color: #cc000a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  text-align: center;
+  color: #ffffff;
+  padding: 8px 10px;
+  margin: 35px;
+  border: none;
+}
+#jj{
+  background-color: whitesmoke;
+  height: 200px;
+  color: grey;
+}
+#kk{
+  padding-bottom: 43px;
+}
+form{
+  size: 56px;
 }
