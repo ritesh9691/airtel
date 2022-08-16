@@ -1,104 +1,375 @@
-ul {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
+* {
   padding: 0;
-  overflow: hidden;
-  background-color: rgb(80, 80, 80);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
 }
 
-li {
-  float: left;
-
-
-}
-
-li a {
-  display: block;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 15px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: grey;
-}
-
-#jello {
-  margin-top: 74px;
-  padding-left: 29px;
-}
-
-#ritesh {
-  float: right;
-}
-
-#null {
-
-  float: right;
-  margin-right: 20px;
-  padding-bottom: 5px;
-}
-
-
-.row {
+.navbar {
   width: 100%;
-  display: inline-flex;
-  height: 450px;
- 
-  
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
 }
 
-.column {
-  float: left;
-  width: 50%;
+.navbar .left {
+  flex: 1;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.navbar .center {
+  padding: 10px 30px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.navbar .center div {
   padding: 10px;
-  height: 300px;
-  /* Should be removed. Only for demonstration */
+  cursor: pointer;
 }
-.new{
-  background-color: rgb(52, 52, 52);
-  margin-top: 10px;
-  
+
+.navbar .center div a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
-h1{
-  color: white;
+
+.navbar .center div a:hover {
+  color: tomato;
+}
+
+.navbar .right {
+  padding: 10px 30px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar .right div {
+  cursor: pointer;
+}
+
+.navbar .right .login {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navbar .right div a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.navbar .right div a:hover {
+  color: tomato;
+}
+
+.slider {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider .slide {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  background-color: #242B30;
+}
+
+.slider .slide .imageContainer {
+  flex: 1;
+  height: 70%;
+}
+
+.slider .slide .imageContainer .image {
+  height: 100%;
+}
+
+.slider .slide .info {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 32px;
-  margin: 30px;
-  padding-top: 100px;
-}
-h6{
   color: white;
-  font-family: 'Nunito Sans', sans-serif;
-    font-size: 12px;
-  margin: 30px;
+  flex: 2;
+  padding: 50px;
 }
-button{
-  border-radius: 4px;
-  background-color: #cc000a;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  text-align: center;
-  color: #ffffff;
-  padding: 8px 10px;
-  margin: 35px;
+
+.slider .slide .info .title {
+  margin: 15px 0;
+  font-size: 50px;
+}
+
+.slider .slide .info .desc {
+  font-size: 20px;
+}
+
+.slider .slide .info .btn {
+  color: white;
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 10px;
   border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #CC000A;
 }
-#jj{
-  background-color: whitesmoke;
-  height: 200px;
-  color: grey;
+
+.FormContainer {
+  padding: 30px 40px;
+  background-color: #E8E9E8;
 }
-#kk{
-  padding-bottom: 43px;
+
+.FormContainer h1 {
+  margin-bottom: 50px;
 }
-form{
-  size: 56px;
+
+.FormContainer form fieldset {
+  border: 0;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.FormContainer form fieldset legend {
+  margin-bottom: 10px;
+}
+
+.FormContainer form fieldset .firstName {
+  margin-right: 10px;
+}
+
+.FormContainer form fieldset .firstName .firstNameLabel,
+.FormContainer form fieldset .lastName .lastNameLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormContainer form fieldset .firstName .firstNameInput,
+.FormContainer form fieldset .lastName .lastNameInput {
+  padding: 10px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  outline: 0;
+  color: black;
+}
+
+.FormContainer form .email,
+.FormContainer form .subject,
+.FormContainer form .message {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormContainer form .email .emailLabel,
+.FormContainer form .subject .subjectLabel,
+.FormContainer form .message .messageLabel {
+  margin-bottom: 10px;
+}
+
+.FormContainer form .email .emailInput,
+.FormContainer form .subject .subjectInput {
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  outline: 0;
+  color: black;
+}
+
+.FormContainer form .message .messageTextarea {
+  padding: 10px;
+  height: 100px;
+  max-width: 400px;
+  margin-bottom: 20px;
+  outline: 0;
+  color: black;
+}
+
+.FormContainer form .btn button {
+  padding: 15px 30px;
+  font-size: 25px;
+  border: 0;
+  cursor: pointer;
+  background-color: rgba(119, 111, 111, 0.212);
+  color: black;
+}
+
+.footer {
+  padding: 10px 30px;
+  display: flex;
+}
+
+.footer .left {
+  flex: 1;
+}
+
+.footer .center {
+  padding: 0 20px;
+  flex: 1;
+}
+
+.footer .center .usefulLinks {
+  margin-bottom: 10px;
+}
+
+.footer .center .links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .center .links li {
+  width: 40%;
+}
+
+.footer .center .links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.footer .center .links li a:hover {
+  color: tomato;
+}
+
+.footer .right {
+  flex: 1;
+}
+
+.footer .right p {
+  font-size: 18px;
+}
+
+.footer .right a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.footer .right a:hover {
+  color: tomato;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar .left {
+    padding: 5px 10px;
+  }
+
+  .navbar .left img {
+    height: 20
+  }
+
+  .navbar .center {
+    padding: 0;
+  }
+
+  .navbar .center div {
+    padding: 5px;
+  }
+
+  .navbar .center div a {
+    font-size: 15px;
+  }
+
+  .navbar .right {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .navbar .right .login {
+    padding-left: 10px;
+  }
+
+  .navbar .right .login a {
+    font-size: 15px;
+  }
+
+  .navbar .right .mail a img {
+    height: 25;
+  }
+
+  .slider {
+    height: 30vh;
+  }
+
+  .slider .slide .info {
+    padding: 0 20px;
+  }
+
+  .slider .slide .info .title {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+
+  .slider .slide .info .desc {
+    font-size: 10px;
+  }
+
+  .slider .slide .info .btn {
+    margin: 10px 0;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 15px;
+  }
+
+  .FormContainer {
+    padding: 10px 20px;
+  }
+
+  .FormContainer h1 {
+    margin-bottom: 30px;
+  }
+
+  .FormContainer form fieldset {
+    flex-direction: column;
+  }
+
+  .FormContainer form fieldset .firstName {
+    margin-right: 0;
+  }
+
+  .FormContainer form fieldset .firstName .firstNameInput,
+  .FormContainer form fieldset .lastName .lastNameInput {
+    margin: 10px 0;
+    max-width: 400px;
+  }
+
+  .FormContainer form .btn button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .footer {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .footer .left {
+    padding: 0;
+  }
+
+  .footer .center .usefulLinks {
+    margin-bottom: 10px;
+  }
+
+  .footer .center .links li {
+    width: 50%;
+  }
+
+  .footer .right {
+    margin: 50px 0px;
+    padding: 0 20px;
+  }
 }
